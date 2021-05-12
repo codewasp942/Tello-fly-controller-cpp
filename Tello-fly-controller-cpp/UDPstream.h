@@ -10,6 +10,12 @@
 
 namespace UDP {
 
+#if defined(WIN)
+	typedef SOCKET my_socket;
+#else
+	typedef int my_socket;
+#endif
+
 	class UDPstream	{
 	public:
 
@@ -17,11 +23,7 @@ namespace UDP {
 		~UDPstream();
 
 	private:
-#if defined(WIN)
-		SOCKET sock;
-#else
-		int sock;
-#endif
+		my_socket sock;
 	};
 
 }
