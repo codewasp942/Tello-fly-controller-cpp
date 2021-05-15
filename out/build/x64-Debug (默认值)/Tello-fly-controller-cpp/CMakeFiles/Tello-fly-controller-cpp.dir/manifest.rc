@@ -1,2 +1,0 @@
-#pragma code_page(65001)
-1 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "D:/my/c++/proj/Tello-fly-controller-cpp/out/build/x64-Debug (默认值)/Tello-fly-controller-cpp/CMakeFiles/Tello-fly-controller-cpp.dir/embed.manifest"
