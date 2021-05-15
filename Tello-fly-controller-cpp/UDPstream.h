@@ -47,7 +47,7 @@ namespace UDP {
 		/// <param name="buffersize">Size of buffer</param>
 		/// <param name="ip">Ip of the sender</param>
 		/// <param name="port">Port of the sender</param>
-		/// <returns>If failed , return false</returns>
+		/// <returns>If failed , return false , you can use WSAGetLastError() to check errors</returns>
 		bool get_data(char* data, int buffersize, char* ip, int& port);
 
 	private:

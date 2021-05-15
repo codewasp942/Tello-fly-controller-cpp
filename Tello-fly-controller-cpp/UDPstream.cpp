@@ -66,11 +66,9 @@ bool UDPstream::get_data(char* data, int buffersize, char* ip, int& port) {
 	int len = sizeof(sockaddr_in);
 	
 	std::clog << "buffersize:" << buffersize << std::endl;
-	if (is_error_socket(recvfrom(sock, data, sizeof(data), 0, (sockaddr*)(&sender_addr), &len))) {
-		std::clog << data << "-- err --" << WSAGetLastError() << std::endl;
+	if (is_error_socket(recvfrom(sock, data, buffersize, 0, (sockaddr*)(&sender_addr), &len))) {
 		return false;
 	}
-	std::clog << data<< "-- nn --" << std::endl;
 	sprintf(ip, "%s", inet_ntoa(sender_addr.sin_addr));
 	port = ntohs(sender_addr.sin_port);
 	return true;
